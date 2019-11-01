@@ -1,4 +1,4 @@
-package tencent50._206_reverse_linked_list;
+package tencent50.easy._206_reverse_linked_list;
 
 /**
  * Created by hank on 2019/10/31

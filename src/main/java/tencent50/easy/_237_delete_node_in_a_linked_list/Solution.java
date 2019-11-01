@@ -1,4 +1,4 @@
-package tencent50._237_delete_node_in_a_linked_list;
+package tencent50.easy._237_delete_node_in_a_linked_list;
 
 /**
  * Created by hank on 2019/10/29

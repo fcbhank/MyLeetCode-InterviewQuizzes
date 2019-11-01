@@ -1,4 +1,4 @@
-package tencent50._104_maximum_depth_of_binary_tree;
+package tencent50.easy._104_maximum_depth_of_binary_tree;
 
 
 public class TreeNode {

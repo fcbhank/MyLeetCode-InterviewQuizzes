@@ -1,4 +1,4 @@
-package tencent50._557_reverse_words_in_a_string_iii;
+package tencent50.easy._557_reverse_words_in_a_string_iii;
 
 /**
  * @author blind_panther

@@ -1,4 +1,4 @@
-package tencent50._344_reverse_string;
+package tencent50.easy._344_reverse_string;
 
 /**
  * Created by hank on 2019/10/31

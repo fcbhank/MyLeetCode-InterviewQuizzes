@@ -1,4 +1,4 @@
-package tencent50._136_single_number;
+package tencent50.easy._136_single_number;
 
 import java.util.Arrays;
 import java.util.HashSet;

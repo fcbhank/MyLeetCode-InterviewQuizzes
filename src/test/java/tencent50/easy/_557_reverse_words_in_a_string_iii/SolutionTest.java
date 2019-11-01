@@ -1,6 +1,7 @@
-package tencent50._557_reverse_words_in_a_string_iii;
+package tencent50.easy._557_reverse_words_in_a_string_iii;
 
 import org.junit.jupiter.api.Test;
+import tencent50.easy._557_reverse_words_in_a_string_iii.Solution;
 
 /**
  * @author blind_panther

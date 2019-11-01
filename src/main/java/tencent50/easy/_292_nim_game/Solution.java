@@ -1,4 +1,4 @@
-package tencent50._292_nim_game;
+package tencent50.easy._292_nim_game;
 
 
 class Solution {
