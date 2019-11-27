@@ -5,54 +5,55 @@ import java.util.Arrays;
 /**
  * Created by hank on 2019/11/12
  */
+import java.util.Stack;
+
 public class MinStack {
 
-    int[] array;
-    int min;
-    int end;
-    final static int INIT_SIZE = 10;
+    // 数据栈
+    private Stack<Integer> data;
+    // 辅助栈
+    private Stack<Integer> helper;
 
     /**
      * initialize your data structure here.
      */
     public MinStack() {
-        array = new int[INIT_SIZE];
-        end = 0;
+        data = new Stack<>();
+        helper = new Stack<>();
     }
 
+    // 思路 1：数据栈和辅助栈在任何时候都同步
+
     public void push(int x) {
-        int len = array.length;
-        if (end == 0) {
-            // 第一次压入
-            min = x;
-        } else if (end == len) {
-            // 需要扩容
-            array = Arrays.copyOf(this.array, 2 * len);
-        }
-        array[end++] = x;
-        // 与最小值比较
-        if (x < min) {
-            min = x;
+        // 数据栈和辅助栈一定会增加元素
+        data.add(x);
+        if (helper.isEmpty() || helper.peek() >= x) {
+            helper.add(x);
+        } else {
+            helper.add(helper.peek());
         }
     }
 
     public void pop() {
-        // 1.长度减1
-        // 2. 重新选取最小值
-        if (end >= 1) {
-            end -= 1;
-            int[] temp = Arrays.copyOf(array, end);
-            Arrays.sort(temp);
-            min = temp[0];
+        // 两个栈都得 pop
+        if (!data.isEmpty()) {
+            helper.pop();
+            data.pop();
         }
     }
 
     public int top() {
-        return array[--end];
+        if(!data.isEmpty()){
+            return data.peek();
+        }
+        throw new RuntimeException("栈中元素为空，此操作非法");
     }
 
     public int getMin() {
-        return min;
+        if(!helper.isEmpty()){
+            return helper.peek();
+        }
+        throw new RuntimeException("栈中元素为空，此操作非法");
     }
 }
 
